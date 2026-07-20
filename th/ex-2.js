@@ -17,7 +17,8 @@ const romanToInt = function (s) {
     let next = values[s[i+1]];
     
     if (current < next) {
-      total -= current;
+      total += next - current;
+      i++;
     } else {
       total += current;
     }
